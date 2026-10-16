@@ -97,22 +97,40 @@ export const Footer: React.FC = () => {
 
           {/* Bottom Row: Copyright & Lead Dev Attribution */}
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-xs">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 text-center sm:text-left">
               <span>
                 &copy; {new Date().getFullYear()} Lithos Inc. All rights reserved.
               </span>
               <span className="hidden sm:inline text-white/20">•</span>
-              <span>
-                Made by{' '}
+              <div className="inline-flex flex-col items-center gap-1 whitespace-nowrap">
+                <span>
+                  Made by{' '}
+                  <a
+                    href="https://lennoxlewis.co.ke"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Lennox Lewis, developer"
+                    className="font-medium text-white transition-colors hover:text-[#e8702a]"
+                  >
+                    Lennox Lewis
+                  </a>
+                </span>
                 <a
                   href="https://lennoxlewis.co.ke"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-[#e8702a] font-medium underline underline-offset-4 transition-colors"
+                  aria-label="Lennox Lewis signature"
+                  className="inline-flex items-center justify-center transition-opacity hover:opacity-75"
                 >
-                  Lennox Lewis
+                  <img
+                    src="/assets/Signatures/signature_L_white.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="h-8 w-auto drop-shadow-[0_0_8px_rgba(232,112,42,0.55)]"
+                    loading="lazy"
+                  />
                 </a>
-              </span>
+              </div>
             </div>
             <div className="flex items-center gap-4 text-white/30">
               <span>Deep time in every stratum</span>
